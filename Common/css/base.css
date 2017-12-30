@@ -1,6 +1,12 @@
 html,body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
+}
+
+* {
+    font-family: PingFang SC, Verdana, Helvetica Neue, 
+    Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
 }
