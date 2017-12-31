@@ -17,8 +17,8 @@
             </div>
             <div class="In-Container">
                 <div class="In-content">
-                    <a class="In-content-header" onclick="test()">
-                        <img src="Index/img/favicon.jpg" alt="头像 啦啦啦">
+                    <a class="In-content-header">
+                        <img src="Index/img/favicon.jpg" alt="点击播放/暂停（音乐）" onclick="musicOpera(event)">
                     </a>
                     <h1 class="In-Content-Name">Mr.Tang</h1>
                     <div class="In-Content-desc">
@@ -27,7 +27,7 @@
                         <span>项目助理</span>
                     </div>
                     <div class="In-Content-others">
-                        <a class="icon" title="主页" href"#" target="_blank">
+                        <a class="icon" title="主页" href"https://github.com/Mr-TNF/" target="_blank">
                             <i class="fa fa-home"></i>
                         </a>
                         <a class="icon" title="简历" href"#" target="_blank">
@@ -47,12 +47,13 @@
                         <a class="icon" title="WORKS" href"#" target="_blank">
                             <i class="fa fa-home"></i>
                         </a>
-                        <a class="icon red" onclick="musicOpera(event)" title="play">
-                            <i class="fa fa-pause"></i>
+                        <a class="icon progress" title="others">
+                            <span id="music-progress"></span>
                         </a>
                     </div>
                 </div>
             </div>
+            <!--<div id="popup" class="hide"></div>-->
         </div>
     </body>
     <script type="text/javascript" src="Common/javascript/index.js"></script>

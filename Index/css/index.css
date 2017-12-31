@@ -4,6 +4,14 @@
     overflow: hidden;
     background: url('../img/bg-index.jpg') no-repeat fixed center;
     background-size: 100% 100%;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    opacity: 0.5;
+}
+
+.bg-container.show {
+    opacity: 1.0;
 }
 
 .In-Container {
@@ -14,13 +22,14 @@
 }
 
 .In-content {
+    -webkit-transition: top .5s ease-in-out;
+    -moz-transition: top .5s ease-in-out;
+    transition: top .5s ease-in-out;
     position: absolute;
     left: calc(50% - 189px);
     left: -webkit-calc(50% - 189px);
     left: -moz-calc(50% - 189px);
-    top: calc(45% - 180px);
-    top: -webkit-calc(45% - 180px);
-    top: -moz-calc(45% - 180px);
+    top: -100%;
     width: 340px;
     padding: 30px 19px;
     background: #eaeaea;
@@ -28,6 +37,13 @@
     border-radius: 5px;
     box-shadow: 12px 12px 26px rgba(0, 0, 0, 0.35);
     text-align: center;
+    border-top: 3px solid #cd7bdd; 
+}
+
+.In-content.show {
+    top: calc(45% - 180px);
+    top: -webkit-calc(45% - 180px);
+    top: -moz-calc(45% - 180px);
 }
 
 .In-content-header {
@@ -43,7 +59,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    width: 25%;
+    width: 64px;
     border-top: 1px solid #b0b0b0;
 }
 
@@ -55,23 +71,25 @@
     right: 0;
 }
 
-
 .In-content-header img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    -webkit-transition: -webkit-transform 800ms;
-    transition: -webkit-transform 800ms;
-    transition: transform 800ms, -webkit-transform 800ms;
     cursor: pointer;
-    border: none;
-    box-shadow: 0px 0px 9px #a0a0a0;
+    border: 15px solid #a0a0a0;
+    box-shadow: 0px 0px 15px #a0a0a0;
+}
+
+.In-content-header img.rotate {
+    -webkit-transition: -webkit-transform 1000ms;
+    transition: -webkit-transform 1000ms;
+    transition: transform 1000ms, -webkit-transform 1000ms;
 }
 
 .In-content-header img:hover {
-    -moz-transform: scale(1.15);
+    /*-moz-transform: scale(1.15);
     -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    transform: scale(1.15);*/
 }
 
 .In-Content-Name {
@@ -156,6 +174,7 @@
     -webkit-transition: -webkit-transform 800ms;
     transition: -webkit-transform 800ms;
     transition: transform 800ms, -webkit-transform 800ms;
+    overflow: hidden;
 }
 
 .In-Content-others a.icon:hover {
@@ -170,6 +189,12 @@
     z-index: 1;
     line-height: 40px;
     font-size: 20px;
+}
+
+span#music-progress {
+    line-height: 40px;
+    font-size: 12px;
+    letter-spacing: 0px;
 }
 
 .In-Content-others a.icon.red {
