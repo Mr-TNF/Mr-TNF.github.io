@@ -4,15 +4,20 @@
         <title>个人主页</title>
         <script src="" type="text/javascript"></script>
         <link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="Common/css/base.css">
         <link rel="stylesheet" type="text/css" href="Index/css/index.css">
     </head>
     <body>
         <div class="bg-container">
+            <div class="bg-music">
+                <audio src="https://m10.music.126.net/20171231033641/8761355bd8e0c58c01cbde1daac843f5/ymusic/2025/260f/3bb5/af011f981611a183d1c74b5c277c1325.mp3" 
+                autoplay="autoplay" id="bg-music"> 
+                </audio>
+            </div>
             <div class="In-Container">
                 <div class="In-content">
-                    <a class="In-content-header">
+                    <a class="In-content-header" onclick="test()">
                         <img src="Index/img/favicon.jpg" alt="头像 啦啦啦">
                     </a>
                     <h1 class="In-Content-Name">Mr.Tang</h1>
@@ -25,10 +30,31 @@
                         <a class="icon" title="主页" href"#" target="_blank">
                             <i class="fa fa-home"></i>
                         </a>
-                        <a></a>
+                        <a class="icon" title="简历" href"#" target="_blank">
+                            <i class="fa fa-address-card"></i>
+                        </a>
+                        <a class="icon" title="微博" href"#" target="_blank">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a class="icon" title="LOVE" href"#" target="_blank">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                        <a class="icon" title="MUSICE" href"#" target="_blank">
+                            <i class="fa fa-music"></i>
+                        </a>
+                        <a class="icon" title="SCHOOL" href"#" target="_blank">
+                            <i class="fa fa-send"></i>
+                        <a class="icon" title="WORKS" href"#" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>
+                        <a class="icon red" onclick="musicOpera(event)" title="play">
+                            <i class="fa fa-pause"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="Common/javascript/index.js"></script>
+    <script type="text/javascript" src="Index/javascript/index.js"></script>
 </html>
