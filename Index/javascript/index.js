@@ -1,4 +1,4 @@
-window.musicProgress="0deg";
+ window.musicProgress="0deg";
 document.ready(function(){
     var bgMusic=document.getElementById("bg-music");
     var currentTime, duration, rotate;
@@ -18,11 +18,12 @@ document.ready(function(){
     });
     /**播放结束 */
     bgMusic.addEventListener("ended", function() {
-        alert("1");
         imgRotate.removeAttribute("class");
         imgRotate.removeAttribute("style");
         musicProgress.removeAttribute("style");
     });
+
+    
 }); 
 
 /**预加载 */
@@ -42,5 +43,7 @@ var musicOpera = function (e) {
     } else {
         musicStatus.pause();
     }  
-} 
+}
+
+
 

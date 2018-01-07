@@ -18,5 +18,28 @@ document.ready = function (callback) {
     else if (document.lastChild == document.body) {
         callback();
     }
-    console.log(1)
 }
+
+document.addEventListener('click', function(e) {
+    var outleft = e.clientX - 39;
+    var outtop =  e.clientY - 39;
+    var rippleOut = document.getElementById("cm-ripple-out");
+    var rippleIn = document.getElementById("cm-ripple-in");
+    var transitions = {
+       'transition':'transitionend',
+       'OTransition':'oTransitionEnd',
+       'MozTransition':'transitionend',
+       'WebkitTransition':'webkitTransitionEnd'
+    };
+    for(var t in transitions) {
+        if(rippleOut.style[t] !== undefined) {
+            var transitonEvent = transitions[t];
+        }
+    }
+    rippleOut.style = "left:"+outleft+"px;top:"+outtop+"px;";
+    rippleOut.className = "check";
+    rippleOut.addEventListener(transitonEvent, function() {
+        rippleOut.style = "";
+        rippleOut.className = "";
+    });
+});

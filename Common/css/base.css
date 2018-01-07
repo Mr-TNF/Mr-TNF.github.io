@@ -11,6 +11,7 @@ html,body {
     height: 100%;
 }
 
+/* 弹窗 start*/
 #popup {
     z-index: 9999;
     position: fixed;
@@ -31,3 +32,53 @@ html,body {
 #popup.show {
     opacity: 1.0;
 }
+/* 弹窗 end */
+
+/** ripple start */
+
+#cm-ripple-out {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    width: 110px;
+    height: 110px;
+    border: 1px solid #c1c2c3;
+    background: rgba(209, 210, 211, .25);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);  
+    -o-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -moz-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -webkit-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    /*box-shadow: -2px 2px 5px rgba(41, 10, 77,.5);*/
+}
+
+#cm-ripple-in {
+    position: relative;
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #c1c2c3;
+    border-radius: 50%;
+    opacity: 1.0;
+    transform: scale(1.0);  
+    -o-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -moz-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -webkit-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#cm-ripple-out.check {
+    opacity: 1;
+    transform: scale(1);  
+}
+
+#cm-ripple-out.check #cm-ripple-in {
+    opacity: 1;
+    transform: scale(1);  
+}
+
+/** ripple end */
