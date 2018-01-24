@@ -39,7 +39,7 @@ document.addEventListener('click', function(e) {
     rippleOut.style = "left:"+outleft+"px;top:"+outtop+"px;";
     rippleOut.className = "check";
     rippleOut.addEventListener(transitonEvent, function() {
-        rippleOut.style = "";
+        // rippleOut.style = "";
         rippleOut.className = "";
     });
 });

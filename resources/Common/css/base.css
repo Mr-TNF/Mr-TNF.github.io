@@ -46,8 +46,8 @@ html,body {
     border: 1px solid #c1c2c3;
     background: rgba(209, 210, 211, .25);
     border-radius: 50%;
-    opacity: 0;
-    transform: scale(0);  
+    opacity: 1.0;
+    transform: scale(1.0);  
     -o-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
     -moz-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
     -webkit-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -63,12 +63,12 @@ html,body {
     height: 100px;
     border: 2px solid #c1c2c3;
     border-radius: 50%;
-    opacity: 1.0;
+    /*opacity: 1.0;
     transform: scale(1.0);  
-    -o-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    -moz-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    -webkit-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -o-transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -moz-transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -webkit-transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);*/
 }
 
 #cm-ripple-out.check {
@@ -76,9 +76,55 @@ html,body {
     transform: scale(1);  
 }
 
-#cm-ripple-out.check #cm-ripple-in {
+/*#cm-ripple-out.check #cm-ripple-in {
     opacity: 1;
     transform: scale(1);  
+}*/
+
+#cm-ripple-in svg {
+    position: absolute;
+    left: 42.5px;
+    top: 42.5px;
+    width: 15px;
+    height: 15px;
+    opacity: 1.0;
+    transform: scale(1.0);
+    -o-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+#cm-ripple-in svg circle {
+    cx: 7.5;
+    cy: 7.5;
+    r: 7.5;
+}
+
+#cm-ripple-out.check #cm-ripple-in svg {
+    width: 5px;
+    height: 5px;
+    opacity: 1.0;
+    transform: scale(0.5); 
+}
+
+#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(1) {
+    top: -15px;
+}
+
+
+#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(2) {
+    left: -15px;
+}
+
+
+#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(3) {
+    right: -15px;
+}
+
+
+#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(4) {
+    bottom:-15px;
 }
 
 /** ripple end */
