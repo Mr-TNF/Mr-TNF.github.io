@@ -32,6 +32,9 @@ window.onload = function() {
     var InContent = document.getElementsByClassName('In-content');
     bgConcontainer[0].className = "bg-container show";
     InContent[0].className = "In-content show";
+    InContent[0].addEventListener('click', function(evt){
+        evt.stopPropagation();
+    });
 }
 
 /**音乐控制开关 */

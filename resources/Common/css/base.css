@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 html,body {
@@ -38,93 +39,75 @@ html,body {
 
 #cm-ripple-out {
     position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 10000;
-    width: 110px;
-    height: 110px;
-    border: 1px solid #c1c2c3;
-    background: rgba(209, 210, 211, .25);
-    border-radius: 50%;
-    opacity: 1.0;
-    transform: scale(1.0);  
-    -o-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    -moz-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    -webkit-transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    transition: opacity,transform .8s cubic-bezier(0.39, 0.575, 0.565, 1);
-    /*box-shadow: -2px 2px 5px rgba(41, 10, 77,.5);*/
+    width: 100vmin;
+    height: 100vmin;
 }
 
 #cm-ripple-in {
-    position: relative;
-    margin-top: 4px;
-    margin-left: 4px;
-    width: 100px;
-    height: 100px;
-    border: 2px solid #c1c2c3;
-    border-radius: 50%;
-    /*opacity: 1.0;
-    transform: scale(1.0);  
-    -o-transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);
-    -moz-transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);
-    -webkit-transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);
-    transition: opacity,transform .5s cubic-bezier(0.39, 0.575, 0.565, 1);*/
+   position: relative;
+   width: 100%;
+   height: 100%;
 }
 
-#cm-ripple-out.check {
-    opacity: 1;
-    transform: scale(1);  
-}
-
-/*#cm-ripple-out.check #cm-ripple-in {
-    opacity: 1;
-    transform: scale(1);  
-}*/
-
-#cm-ripple-in svg {
+.wave {
     position: absolute;
-    left: 42.5px;
-    top: 42.5px;
-    width: 15px;
-    height: 15px;
-    opacity: 1.0;
-    transform: scale(1.0);
-    -o-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -webkit-transition: all .8s ease;
-    transition: all .8s ease;
+    top: calc((100% - 20vmin)/2);
+    left: calc((100% - 20vmin)/2);
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    background-image: url(http://127.0.0.1:5050/resources/Index/img/bg-index.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    opacity: 0;
+    transition: all .2s;
 }
 
-#cm-ripple-in svg circle {
-    cx: 7.5;
-    cy: 7.5;
-    r: 7.5;
+.g-wave1 {
+    background-size: 106% 106%;
+    animation: wave 1s ease-out .1s;
+    animation-fill-mode: forwards;
+    z-index: 10;
 }
 
-#cm-ripple-out.check #cm-ripple-in svg {
-    width: 5px;
-    height: 5px;
-    opacity: 1.0;
-    transform: scale(0.5); 
+.g-wave2 {
+    background-size: 102% 102%;
+    animation: wave 1s ease-out .15s;
+    animation-fill-mode: forwards;
+    z-index: 20;
+}
+.g-wave3 {
+    background-size: 104% 104%;
+    animation: wave 1s ease-out .25s;
+    animation-fill-mode: forwards;
+    z-index: 30;
+}
+.g-wave4 {
+    background-size: 100% 100%;
+    animation: wave 1s ease-out .4s;
+    animation-fill-mode: forwards;
+    z-index: 40;
 }
 
-#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(1) {
-    top: -15px;
+@keyframes wave {
+    0% {
+        top: calc((100% - 20vmin)/2);
+        left: calc((100% - 20vmin)/2);
+        width: 20vmin;
+        height: 20vmin;
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        top: calc((100% - 100vmin)/2);
+        left: calc((100% - 100vmin)/2);
+        width: 100vmin;
+        height: 100vmin;
+        opacity: 0;
+    }
 }
 
-
-#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(2) {
-    left: -15px;
-}
-
-
-#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(3) {
-    right: -15px;
-}
-
-
-#cm-ripple-out.check #cm-ripple-in svg.check:nth-child(4) {
-    bottom:-15px;
-}
 
 /** ripple end */

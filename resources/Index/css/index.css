@@ -38,6 +38,7 @@
     box-shadow: 12px 12px 26px rgba(0, 0, 0, 0.35);
     text-align: center;
     border-top: 3px solid #cd7bdd; 
+    z-index: 1000;
 }
 
 .In-content.show {
@@ -84,12 +85,6 @@
     -webkit-transition: -webkit-transform 1000ms;
     transition: -webkit-transform 1000ms;
     transition: transform 1000ms, -webkit-transform 1000ms;
-}
-
-.In-content-header img:hover {
-    /*-moz-transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);*/
 }
 
 .In-Content-Name {
