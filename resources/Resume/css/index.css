@@ -295,21 +295,10 @@ ul.education li p {
     overflow: hidden;
 }
 
-.skills-item {
+
+.skills .item {
+    float: left;
     width: 50%;
-    height:auto;
-}
-
-.skills-item.left {
-    padding-right: 2.5%;
-}
-
-.skills-item.right {
-    padding-left: 2.5%;
-}
-
-.skills-item .item {
-    width: 100%;
     padding: 15px 0px; 
 }
 

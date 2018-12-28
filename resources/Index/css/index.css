@@ -22,9 +22,9 @@
 }
 
 .In-content {
-    -webkit-transition: top .5s ease-in-out;
-    -moz-transition: top .5s ease-in-out;
-    transition: top .5s ease-in-out;
+    -webkit-transition: top .35s ease-in-out;
+    -moz-transition: top .35s ease-in-out;
+    transition: top .35s ease-in-out;
     position: absolute;
     left: calc(50% - 189px);
     left: -webkit-calc(50% - 189px);
@@ -82,9 +82,9 @@
 }
 
 .In-content-header img.rotate {
-    -webkit-transition: -webkit-transform 1000ms;
-    transition: -webkit-transform 1000ms;
-    transition: transform 1000ms, -webkit-transform 1000ms;
+    -webkit-transition: -webkit-transform 10ms;
+    transition: -webkit-transform 10ms;
+    transition: transform 10ms, -webkit-transform 10ms;
 }
 
 .In-Content-Name {

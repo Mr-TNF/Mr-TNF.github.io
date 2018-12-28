@@ -1,0 +1,55 @@
+{
+    "musicUrl": "resources/Common/July.mp3",
+    "name": "Mr.Tang",
+    "type": ["WEB前端开发", "WEB后端开发"],
+    "list": [
+        {
+            "class": "icon",
+            "title": "主页",
+            "iclass": "fa fa-home",
+            "href": "https://github.com/Mr-TNF/"
+        },
+        {
+            "class": "icon",
+            "title": "简历",
+            "iclass": "fa fa-address-card",
+            "href": "resume.html"
+        },
+        {
+            "class": "icon",
+            "title": "微博",
+            "iclass": "fa fa-weibo",
+            "href": "https://weibo.com/u/3839254058?refer_flag=1001030201_&is_all=1"
+
+        },
+        {
+            "class": "icon",
+            "title": "LOVE",
+            "iclass": "fa fa-heart",
+            "href": "#"
+
+        },
+        {
+            "class": "icon",
+            "title": "MUSICE",
+            "iclass": "fa fa-music",
+            "href": "http://music.163.com/#/user/home?id=68574858"
+
+        },
+        {
+            "class": "icon",
+            "title": "SCHOOL",
+            "iclass": "fa fa-send",
+            "href": "https://www.zhbit.com/"
+
+        },
+        {
+            "class": "icon",
+            "title": "WORKS",
+            "iclass": "fa fa-home",
+            "href": "#"
+
+        }
+    ]
+
+}
