@@ -56,7 +56,7 @@ html,body {
     width: 20vmin;
     height: 20vmin;
     border-radius: 50%;
-    background-image: url(http://127.0.0.1:5050/resources/Index/img/bg-index.jpg);
+    background-image: url(/resources/Index/img/bg-index.jpg);
     background-attachment: fixed;
     background-position: center center;
     opacity: 0;
